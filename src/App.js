@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <Posts setSelectedPost={setSelectedPost} />
+      <Comments />
       {selectedPost}
       <FullPost id = {selectedPost}/>
     </div>
