@@ -2,7 +2,7 @@ import classes from "./Comments.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const Comments = () => {
+const Comments = ({ setSelectedComment }) => {
 
     const [comments, setComments] = useState([]);
 
@@ -14,7 +14,7 @@ const Comments = () => {
       }, []);
     
       const results = comments.map((comment) => (
-        <article key = {comment.id}>
+        <article key = {comment.id} onClick={() => setSelectedComment(comment.id)}>
             <h2>{comment.name}</h2>
             <p>{comment.body}</p>
         </article>
