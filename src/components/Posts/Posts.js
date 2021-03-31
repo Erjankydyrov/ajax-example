@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import classes from "./Posts.module.css";
-const Posts = ({ message }) => {
+const Posts = ({ setSelectedPost }) => {
 
   const [posts, setPosts] = useState([]);
 
@@ -29,7 +29,7 @@ const Posts = ({ message }) => {
   }, []);
 
   const results = posts.map((post) => (
-    <article key = {post.id}>
+    <article key = {post.id} onClick={() => setSelectedPost(post.id)}>
         <h2>{post.title}</h2>
         <p>{post.body}</p>
     </article>
