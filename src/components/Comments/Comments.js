@@ -14,7 +14,7 @@ const Comments = () => {
       }, []);
     
       const results = comments.map((comment) => (
-        <article>
+        <article key = {comment.id}>
             <h2>{comment.name}</h2>
             <p>{comment.body}</p>
         </article>
