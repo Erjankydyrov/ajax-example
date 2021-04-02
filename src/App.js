@@ -7,25 +7,19 @@ import Posts from './components/Posts/Posts';
 
 function App() {
   const [selectedPost, setSelectedPost] = useState(0);
-  const [selectedComment, setSelectedComment] = useState(0);
 
   let fullPost = "Select a post!";
   if (selectedPost == 0) {
     fullPost = <FullPost id = {selectedPost} />
   }
 
-  let fullComment = "Select a comment!";
-  if (selectedComment == 0) {
-    fullComment = <FullComment id = {selectedComment} />
-  }
   return (
     <div className="App">
       <Posts setSelectedPost={setSelectedPost} />
-      <Comments setSelectedComment={setSelectedComment} />
+      <Comments setSelectedPost={setSelectedPost} />
       {selectedPost}
       <FullPost id = {selectedPost}/>
-      {selectedComment}
-      <FullComment id = {selectedComment} />
+      <FullComment id = {selectedPost} />
     </div>
   );
 }

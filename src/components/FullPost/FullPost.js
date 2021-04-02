@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Author from "../Author/Author";
 import classes from "./FullPost.module.css";
 
 const FullPost = ({ id }) => {
@@ -20,6 +21,7 @@ const FullPost = ({ id }) => {
     return ( 
         <main className = {classes.FullPost}>
             <h1>{post.title}</h1>
+            <Author />
             <p>{post.body}</p>
         </main>
     );
