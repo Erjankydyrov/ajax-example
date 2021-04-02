@@ -1,9 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Pictures from '../Pictures/Pictures';
 import classes from "./Albums.module.css";
 
 
-const Albums = ({ setSelectedAlbum }) => {
+const Albums = ({ setSelectedAlbum, id }) => {
   const [albums, setAlbums] = useState([ ]);
 
 
@@ -19,7 +20,7 @@ const Albums = ({ setSelectedAlbum }) => {
       <div key={album.id} onClick={() => setSelectedAlbum(album.id)}>
           <h2>{album.title}</h2>
       </div>
-  ) )
+  ))
 
 
   return (

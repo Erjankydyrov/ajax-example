@@ -4,6 +4,7 @@ import Albums from './components/Albums/Albums';
 import Comments from './components/Comments/Comments';
 import FullComment from './components/FullComment/FullComment';
 import FullPost from './components/FullPost/FullPost';
+import Pictures from './components/Pictures/Pictures';
 import Posts from './components/Posts/Posts';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       <Comments setSelectedPost={setSelectedPost} />
       <FullPost id = {selectedPost}/>
       <FullComment id = {selectedPost} />
-      <Albums setSelectedAlbum = {setSelectedAlbum}/>
+      <Albums setSelectedAlbum = {setSelectedAlbum} id={selectedAlbum}/>
     </div>
   );
 }
