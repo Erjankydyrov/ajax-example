@@ -22,7 +22,8 @@ function App() {
       <Comments setSelectedPost={setSelectedPost} />
       <FullPost id = {selectedPost}/>
       <FullComment id = {selectedPost} />
-      <Albums setSelectedAlbum = {setSelectedAlbum} id={selectedAlbum}/>
+      <Albums setSelectedAlbum = {setSelectedAlbum}/>
+      <Pictures albumId = {selectedAlbum} />
     </div>
   );
 }
