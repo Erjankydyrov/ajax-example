@@ -17,7 +17,6 @@ function App() {
     <div className="App">
       <Posts setSelectedPost={setSelectedPost} />
       <Comments setSelectedPost={setSelectedPost} />
-      {selectedPost}
       <FullPost id = {selectedPost}/>
       <FullComment id = {selectedPost} />
     </div>
