@@ -17,7 +17,7 @@ const Author = ({ userid }) => {
 
     return ( 
         <div className = {classes.Author}>
-            {email.length > 0 ? email : "Loading..."}
+            {email}
         </div>
     );
 }

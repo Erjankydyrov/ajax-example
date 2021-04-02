@@ -1,30 +1,30 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import classes from "./Albums.module.css";
-const Albums = () => {
 
-  const [albums, setAlbums] = useState({
-    title: "",
-    id: "",
-  });
+
+const Albums = ({ setSelectedAlbum }) => {
+  const [albums, setAlbums] = useState([ ]);
+
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/albums')
       .then((response) => {
-        setAlbums(response.data.slice(0, 5));
+        const albums = response.data.slice(0, 5);
+        setAlbums(albums);
       });
   }, []);
 
-  const results = albums.map((album) => (
-    <article key = {album.id}>
-        <h2>{album.title}</h2>
-        <p>{album.id}</p>
-    </article>
-  ))
+  const result = albums.map((album) =>(
+      <div key={album.id} onClick={() => setSelectedAlbum(album.id)}>
+          <h2>{album.title}</h2>
+      </div>
+  ) )
+
 
   return (
     <div className={classes.Albums}>
-        {results.length > 0 ? results : "Loading..."}
+      {result}
     </div>
   );
 }

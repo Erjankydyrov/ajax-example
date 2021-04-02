@@ -8,6 +8,7 @@ import Posts from './components/Posts/Posts';
 
 function App() {
   const [selectedPost, setSelectedPost] = useState(0);
+  const [selectedAlbum, setSelectedAlbum] = useState(0);
 
   let fullPost = "Select a post!";
   if (selectedPost == 0) {
@@ -20,7 +21,7 @@ function App() {
       <Comments setSelectedPost={setSelectedPost} />
       <FullPost id = {selectedPost}/>
       <FullComment id = {selectedPost} />
-      <Albums />
+      <Albums setSelectedAlbum = {setSelectedAlbum}/>
     </div>
   );
 }
