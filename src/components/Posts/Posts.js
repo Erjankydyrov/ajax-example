@@ -23,7 +23,7 @@ const Posts = ({ setSelectedPost }) => {
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {
-        setPosts(response.data.slice(0, 10));
+        setPosts(response.data.slice(0, 5));
         console.log("data", posts)
       });
   }, []);

@@ -9,7 +9,7 @@ const Comments = ({ setSelectedPost }) => {
     useEffect(() => {
         axios.get('https://jsonplaceholder.typicode.com/comments')
           .then((response) => {
-            setComments(response.data.slice(0, 10));
+            setComments(response.data.slice(0, 5));
           });
       }, []);
     

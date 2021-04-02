@@ -7,7 +7,7 @@ const FullPost = ({ id }) => {
 
     const[post, setPost] = useState({
         title: "",
-        userid: "",
+        userId: "",
         body: "",
     })
 
@@ -22,7 +22,7 @@ const FullPost = ({ id }) => {
     return ( 
         <main className = {classes.FullPost}>
             <h1>{post.title}</h1>
-            <Author userid = {id}/>
+            <Author userid = {post.userId}/>
             <p>{post.body}</p>
         </main>
     );
