@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Albums from './components/Albums/Albums';
 import Comments from './components/Comments/Comments';
 import FullComment from './components/FullComment/FullComment';
 import FullPost from './components/FullPost/FullPost';
@@ -19,6 +20,7 @@ function App() {
       <Comments setSelectedPost={setSelectedPost} />
       <FullPost id = {selectedPost}/>
       <FullComment id = {selectedPost} />
+      <Albums />
     </div>
   );
 }

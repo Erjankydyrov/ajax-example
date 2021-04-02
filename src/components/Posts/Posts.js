@@ -5,21 +5,6 @@ const Posts = ({ setSelectedPost }) => {
 
   const [posts, setPosts] = useState([]);
 
-  // Выводится только при первом выводе
-//   useEffect(() => {
-//     console.log("[Posts.js] render with useEffect");
-//   }, []);
-
-//   // Выводится только при изменении message
-//   useEffect(() => {
-//     console.log("[Posts.js] render with useEffect depeding on message variable");
-//   }, [message]);
-
-//   // Для задержки выполнения чего-то
-//   useEffect(() => {
-//     setTimeout(() => console.log("Hello from Posts"), 2000);
-//   }, []);
-
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {
